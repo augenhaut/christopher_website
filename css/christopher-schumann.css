@@ -2101,10 +2101,10 @@ figcaption {
 }
 
 .contact-grid {
-  grid-column-gap: 150px;
+  grid-column-gap: 125px;
   grid-row-gap: 150px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr .5fr 1.5fr;
+  grid-template-columns: 1.75fr 1.25fr 1.5fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
