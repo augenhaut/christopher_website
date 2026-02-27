@@ -51,7 +51,8 @@ export async function loadEvents(filter = "upcoming") {
         }
     });
 
-    const nowTimestamp = new Date().getTime();
+    // setHours() already returns the timestamp, no need for getTime()
+    const nowTimestamp = new Date().setHours(0, 0, 0, 0);
 
     const upcoming = events.filter((e) => e.timestamp >= nowTimestamp).sort((a, b) => a.timestamp - b.timestamp);
     const past = events.filter((e) => e.timestamp < nowTimestamp).sort((a, b) => b.timestamp - a.timestamp);
