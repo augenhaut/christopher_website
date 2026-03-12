@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html data-wf-page="6615ad6c0c0860734d3105c2" data-wf-site="6613bcaec541108817b1e1c2" lang="de">
     <head>
         <meta charset="utf-8" />
@@ -132,7 +132,7 @@
             !(function (o, c) {
                 var n = c.documentElement,
                     t = " w-mod-";
-                (n.className += t + "js"), ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch");
+                ((n.className += t + "js"), ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch"));
             })(window, document);
         </script>
         <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -163,7 +163,7 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                opacity: 0.7;
+                opacity: 1;
             }
             .youtube .play-button {
                 width: 60px;
@@ -174,7 +174,18 @@
                 align-items: center;
                 justify-content: center;
             }
-            .youtube img,
+            .youtube:hover .play-button svg circle {
+                stroke: var(--accent-1);
+            }
+            .youtube:hover .play-button svg path {
+                fill: var(--accent-1);
+            }
+            .play-button svg circle,
+            .play-button svg path {
+                transition:
+                    fill 0.1s ease,
+                    stroke 0.1s ease;
+            }
             .youtube .play-button {
                 cursor: pointer;
             }
