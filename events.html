@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html data-wf-page="661537fb1341e6ccc4897c3a" data-wf-site="6613bcaec541108817b1e1c2" lang="de">
     <head>
         <meta charset="utf-8" />
@@ -76,7 +76,7 @@
             !(function (o, c) {
                 var n = c.documentElement,
                     t = " w-mod-";
-                (n.className += t + "js"), ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch");
+                ((n.className += t + "js"), ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch"));
             })(window, document);
         </script>
         <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -504,14 +504,14 @@
                                             <div class="h4-text">${e.month === "0" ? "" : e.month}</div>
                                         </div>
                                     </div>
-                                    <div class="margin-bottom20">
+                                    <div class="margin-bottom20" style="text-align: center;">
                                         <div class="h5-text">${e.name === "0" ? "" : e.name}</div>
                                     </div>
                                     <a href=${e.link === "0" ? "" : e.link} class="btn-img-link is-events w-inline-block" target="_blank">
                                         <img src="images/Group-872.svg" loading="lazy" alt="" />
                                     </a>
                                 </div>
-                                `
+                                `,
                         )
                         .join("");
                 } catch (err) {
